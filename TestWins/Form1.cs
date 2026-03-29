@@ -8,11 +8,16 @@ public partial class Form1 : Form
     //business
     private readonly StudentController controller = new StudentController();
 
-    public Form1()
+     public Form1()
     {
         InitializeComponent();
+        loadData();
     }
 
+    private void loadData()
+    {
+        dataGridView1.DataSource = controller.getAll();
+    }
     private void btnAdd_Click(object sender, EventArgs e)
     {
         var student = new TestWins.Model.Student
