@@ -8,7 +8,7 @@ public partial class Form1 : Form
     //business
     private readonly StudentController controller = new StudentController();
 
-     public Form1()
+    public Form1()
     {
         InitializeComponent();
         loadData();
